@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+</head>
+
+<body>
+
+  
+  <label for="ageInput">Enter your age:</label>
+  <input id="ageInput" type="number"/>
+  <button id="validateAgeButton">Validate Age</button>
+  <p id="validateAgeResult"></p>
+
+
+  <label for="animalName">Enter yout favorite animal:</label>
+  <input id="animalName" type="text"/>
+  <button id="displayAnimalButton">Display Animal</button>
+  <p id="displayAnimalName"></p>
+
+
+  <label for="colorInput">Enter your favorite color:</label>
+  <input id="colorInput" type="text"/>
+  <button id="displayColorButton">Display Color</button>
+  <p id="displayColorName"></p>
+  
+
+  <label for="userInput">Yes/No Question:</label>
+  <input id="userInput" type="text"/>
+  <button id="displayMessageButton">Display Message</button>
+  <p id="displayMessage"></p>
+  
+  <script>
+
+    //Validating age
+    const ageInput = document.getElementById("ageInput");
+    const validateAgeButton = document.getElementById("validateAgeButton");
+    const validateAgeResult = document.getElementById("validateAgeResult");
+
+    validateAgeButton.addEventListener("click", function(){
+      const userAge = ageInput.value;
+      
+        if (userAge >= 18 && userAge <= 100)
+        {
+          validateAgeResult.textContent = `Valid Age.`;
+        }
+       else
+        {
+          validateAgeResult.textContent = `Invalid Age!`
+        }
+    });
+
+
+    //Display animal name
+    const animalName = document.getElementById("animalName");
+    const displayAnimalButton = document.getElementById("displayAnimalButton");
+    const displayAnimalName = document.getElementById("displayAnimalName");
+
+    displayAnimalButton.addEventListener("click", function(){
+      const animal = animalName.value;
+      displayAnimalName.textContent = `Your favorite animal is: ${animal}`;
+    });
+
+    //Display Color Name
+    const colorInput = document.getElementById("colorInput");
+    const displayColorButton = document.getElementById("displayColorButton");
+    const displayColorName = document.getElementById("displayColorName");
+
+    displayColorButton.addEventListener("click", function(){
+      const color = colorInput.value;
+      displayColorName.textContent = `Your favorite color is: ${color}`;
+    });
+
+
+    //Display message
+    const userInput = document.getElementById("userInput");
+    const displayMessageButton = document.getElementById("displayMessageButton");
+    const displayMessage = document.getElementById("displayMessage");
+
+    displayMessageButton.addEventListener("click", function(){
+      const userMessage = userInput.value;
+      displayMessage.textContent = `You said '${userMessage}'.`;
+    });
+    
+    
+  </script>
+</body>
+
+</html>
