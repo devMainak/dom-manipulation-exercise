@@ -86,7 +86,9 @@
 
     displayMessageButton.addEventListener("click", function () {
       const userMessage = userInput.value;
-      displayMessage.textContent = `You said '${userMessage}'.`;
+      if (userMessage == "Yes" || userMessage == "No") {
+        displayMessage.textContent = `You said '${userMessage}'.`;
+      }
     });
 
 
